@@ -134,21 +134,49 @@ def conocerEdades(edades):
       txt="El año no es bisiesto"
    return print("Edad mayor:" ,edadMayor,", y nació en el año:",2023-edadMayor,txt,"\nEdad menor:",edadMenor, ", y nació en el año:",2023-edadMenor, "\nEntre la edad mayor y la menor hay una diferencia de:",edadMayor-edadMenor,"Y entre ellos estan las edades:",restantes)
 
+def productoCartesiano(lista1,lista2):
+   """
+   """
+   lista3=[]
+   for i in range(len(lista1)):
+      for j in range(len(lista2)):
+         lista3.append((lista1[i],lista2[j]))
+   return print(lista3)
 
+def eliminarEspacios(txt):
+   """
+   """
+   txt=txt.replace(" ","")
+   return print(txt)
+
+def buscarVirus(listaVirus, indice):
+   """
+   """
+   for i in range(len(listaVirus)):
+      if i==indice:
+         listaVirus[i]="Virus"
+   return print(listaVirus)
+"""
 edadesConocidos=int(input("Digite la cantidad de edades a ingresar: "))
 edades=[int(input("Digite la edad: ")) for _ in range(edadesConocidos)]
-"""cantidadEdades=int(input("Digite la cantidad de edades a ingresar: "))"""
-"""edades=[random.randint(0,100) for _ in range(cantidadEdades)]"""
+cantidadEdades=int(input("Digite la cantidad de edades a ingresar: "))
+edades=[random.randint(0,100) for _ in range(cantidadEdades)]
 notas=[random.randint(0,100) for _ in range(10)]
 listaGordo=[random.randint(0,99) for _ in range(5)]
 lista=[random.randint(0,99) for _ in range(5)]
+lista1=[1,2,3]	
+lista2=[4,5,6]
 txt= "asdlk;ifhn 11;z//123daslkn231"
-"""
 revisarCarnet(listaCarnet)
 analizarCadena(txt)
 indicarParidad(lista)
 gordoNavidenno(listaGordo)
 notasImaginarias(notas)
 calificarEdades(edades)
-"""
 conocerEdades(edades)
+productoCartesiano(lista1,lista2)  
+eliminarEspacios(txt)
+"""
+listaVirus=[10, 11, 30]
+indice=int(input("Digite el indice a buscar: "))
+buscarVirus(listaVirus, indice)
