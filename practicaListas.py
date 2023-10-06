@@ -152,10 +152,25 @@ def eliminarEspacios(txt):
 def buscarVirus(listaVirus, indice):
    """
    """
-   for i in range(len(listaVirus)):
-      if i==indice:
-         listaVirus[i]="Virus"
+   if indice<0 or indice>len(listaVirus[0])-1:
+      indice=len(listaVirus[0])-1
+   for i in listaVirus:
+       i[indice]="error"
    return print(listaVirus)
+
+def agruparNumeros(lista):
+   """
+   """
+   listaNueva=[]
+   for i in lista:
+      for j in range(len(lista)):
+         if lista[j]%2==0:
+            numeroPar=lista[j]%2
+            listaNueva.append(numeroPar)
+         else:
+            numeroImpar=lista[j]%2
+            listaNueva.append(numeroImpar) 
+   return print(listaNueva)
 """
 edadesConocidos=int(input("Digite la cantidad de edades a ingresar: "))
 edades=[int(input("Digite la edad: ")) for _ in range(edadesConocidos)]
@@ -176,7 +191,10 @@ calificarEdades(edades)
 conocerEdades(edades)
 productoCartesiano(lista1,lista2)  
 eliminarEspacios(txt)
-"""
-listaVirus=[10, 11, 30]
+listaVirus=[[10, 11, 30],[40, 50, 60],[70, 80, 90]]
 indice=int(input("Digite el indice a buscar: "))
 buscarVirus(listaVirus, indice)
+"""
+
+lista=[20845224809]
+agruparNumeros(lista)
